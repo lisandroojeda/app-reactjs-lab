@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Student from './component/student/Student';
+import StudentCC from './component/student/StudentCC';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,8 @@ function App() {
           Componente Estudiante
         </p>
         <Student />
+        <hr />
+        <StudentCC />
       </header>
     </div >
   );
