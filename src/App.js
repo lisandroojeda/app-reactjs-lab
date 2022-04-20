@@ -2,7 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import Student from './component/student/Student';
 import StudentCC from './component/student/StudentCC';
+import Signature from './component/signature/Signatures';
+import CountClick from './component/countClicks/CountClick';
 function App() {
+
+  const student = {
+    name: "Lisandro",
+    lastName: "Ojeda Fernandez",
+    age: 35,
+    email: "l.ojedafernandez@gmail.com",
+    phone: "+540292015323027",
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,7 +34,9 @@ function App() {
         </p>
         <Student />
         <hr />
-        <StudentCC />
+        <StudentCC student={student} />
+        <CountClick />
+        <Signature />
       </header>
     </div >
   );
