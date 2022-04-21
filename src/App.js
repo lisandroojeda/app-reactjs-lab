@@ -4,6 +4,7 @@ import Student from './component/student/Student';
 import StudentCC from './component/student/StudentCC';
 import Signature from './component/signature/Signatures';
 import CountClick from './component/countClicks/CountClick';
+import PersonList from './component/personList/PersonList';
 function App() {
 
   const student = {
@@ -37,6 +38,7 @@ function App() {
         <StudentCC student={student} />
         <CountClick />
         <Signature />
+        <PersonList />
       </header>
     </div >
   );

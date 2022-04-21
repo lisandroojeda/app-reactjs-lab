@@ -1,4 +1,4 @@
-import React, { Component, State } from "react";
+import React, { Component } from "react";
 import Signatures from "../signature/Signatures";
 
 import "./Student.css";
