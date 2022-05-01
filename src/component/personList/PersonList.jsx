@@ -11,11 +11,25 @@ export default class PersonList extends Component {
   }
 
   getListPersons() {
-    fetch("https://randomuser.me/api/?results=10")
+    fetch("http://localhost:1234/personas")
       .then((resp) => resp.json())
       .then((json) => {
         this.setState({
-          persons: json.results,
+          persons: json.personas,
+          result: json.result,
+        });
+      });
+  }
+
+  getListPersonsId() {
+    fetch("http://localhost:1234/personas")
+      .then((resp) => resp.json())
+      .then((json) => {
+
+        let person = document.getElementById()
+        this.setState({
+          persons: json.personas,
+          result: json.result,
         });
       });
   }
@@ -55,12 +69,10 @@ export default class PersonList extends Component {
           <tbody>
             {this.state.persons.map((person, index) => (
               <tr>
-                <td>{person.name.first}</td>
-                <td>{person.name.last}</td>
-                <td>
-                  {person.location.street.number && person.location.street.name}
-                </td>
-                <td>{person.phone}</td>
+                <td>{person.nombre}</td>
+                <td>{person.apellido}</td>
+                <td>{person.direccion && person.direccion.direccion}</td>
+                <td>{person.telefonos && person.telefonos[0].numero}</td>
               </tr>
             ))}
           </tbody>
